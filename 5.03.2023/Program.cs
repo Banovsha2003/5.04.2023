@@ -5,8 +5,10 @@ namespace _5._03._2023
     public class Program
     {
         static void Main(string[] args)
-        {
-
+        { Player player= new Player();
+            player.Name = "Test";
+            PlayerController playerController = new PlayerController();
+            PlayerController.EquipWeapon(new )
         }
     }
 
@@ -68,43 +70,81 @@ namespace _5._03._2023
     //    }
     //}
 
-    ////Task:3
+    //Task:3
     //interface IComparable
-    //{ 
-    //     void CompareTo();
+    //{
+    //    void CompareTo();
     //}
-    //class Person: IComparable
+    //class Person : IComparable
     //{
     //    public string Name;
     //    public int Age;
-    //    public void CompareTo()
+    //    public void CompareTo( int AgePerson)
     //    {
+    //        if(AgePerson>Age)
+    //        {
+    //            Console.WriteLine("birinci sexsin yasi boyukdur");
+    //        }
+    //        else if(AgePerson==Age)
+    //        {
+    //            Console.WriteLine("Yasiddirlar");
+    //        }
+    //        else {
+    //            Console.WriteLine("Ikinci sexsin yasi boyukdur");
+    //                }
 
     //    }
     //}
 
     //Task:4
-    class PowerUp
-    {
-        public virtual void Activite()
+    //class PowerUp
+    //{
+    //    public virtual void Activite()
+    //    {
+
+    //    }
+
+    //}
+
+    //class HealthPowerUp : PowerUp
+    //{
+    //    public override void Activite()
+    //    {
+    //        Console.WriteLine("Can artdi");
+    //    }
+    //}
+
+    //class SpeedPowerUp : PowerUp
+    //{
+    //    public override void Activite()
+    //    {
+    //        Console.WriteLine("Suret atdi");
+    //    }
+    //}
+
+    //Task:5
+     class Player
+    { public string Name { get; set; }
+        public void Attackt()
         {
+
         }
-
     }
-
-    class HealthPowerUp : PowerUp
+    class PlayerController
     {
-        public override void Activite()
+        private weapon _weapon;
+        private Player _player; 
+        public PlayerController(Player player)
         {
-            Console.WriteLine("Can artdi");
+            _player= player;
         }
-    }
-
-    class SpeedPowerUp : PowerUp
-    {
-        public override void Activite()
+        public void EquipWeapon(Weapon weapon)
         {
-            Console.WriteLine("Suret atdi");
+            _weapon= weapon;
+        }
+        public void Attackt()
+        {
+            if(_weapon)
         }
     }
 
